@@ -18,7 +18,7 @@ export default class QuestionText extends React.Component {
 const styles = StyleSheet.create({
 	defaultStyle: {
 		fontStyle: "bold",
-		fontSize: 30,
+		fontSize: 18,
 		color: "#F92672"
 	},
 });

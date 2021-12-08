@@ -18,7 +18,7 @@ export default class AnswerText extends React.Component {
 const styles = StyleSheet.create({
 	defaultStyle: {
 		fontStyle: "italic",
-		fontSize: 30,
+		fontSize: 18,
 		color: "#00ff00"
 	},
 });
