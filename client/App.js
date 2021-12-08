@@ -37,8 +37,8 @@ export default function App() {
 				<QuestionText>Embauchage ==></QuestionText><AnswerText>{user.hireable}</AnswerText>{"\n"}
 				<QuestionText>Bio ==></QuestionText><AnswerText>{user.bio}</AnswerText>{"\n"}
 				<QuestionText>Login Twitter ==></QuestionText><AnswerText>{user.twitter_username}</AnswerText>{"\n"}
-				<QuestionText>Repos Publics ==></QuestionText><AnswerText>{user.public_repos}</AnswerText>{"\n"}
-				<QuestionText>Gists Publics ==></QuestionText><AnswerText>{user.public_gists}</AnswerText>{"\n"}
+				<QuestionText>Repos Publiques ==></QuestionText><AnswerText>{user.public_repos}</AnswerText>{"\n"}
+				<QuestionText>Gists Publiques ==></QuestionText><AnswerText>{user.public_gists}</AnswerText>{"\n"}
 				<QuestionText>Followers ==></QuestionText><AnswerText>{user.followers}</AnswerText>{"\n"}
 				<QuestionText>Followings ==></QuestionText><AnswerText>{user.following}</AnswerText>{"\n"}
 				<QuestionText>Date de création ==></QuestionText><AnswerText>{user.created_at}</AnswerText>{"\n"}
