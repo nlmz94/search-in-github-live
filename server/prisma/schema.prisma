@@ -8,7 +8,7 @@ datasource db {
 }
 
 model User {
-  id               String    @id @default(uuid())
+  id               Int       @id @default(autoincrement())
   login            String    @unique
   node_id          String?
   html_url         String?
