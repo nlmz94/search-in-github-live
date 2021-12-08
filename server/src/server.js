@@ -1,8 +1,10 @@
 import express from "express";
+import cors from "cors";
 
 export function launch(port) {
 	const application = express();
 
+	application.use(cors());
 	application.get("/api/users/:username", (request, response) => {
 		// Step 1 - Does User exist in our Database
 		//   If True  -> Retrieve from our Database

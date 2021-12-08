@@ -9,7 +9,7 @@ export default function App() {
 		try {
 			const response = await fetch(`http://localhost:4242/api/users/${username}`);
 			const user = await response.json();
-
+			console.log(user);
 			setUser(user);
 		} catch (error) {
 			console.log(error.message);
