@@ -9,8 +9,8 @@ export default function App() {
 		try {
 			const response = await fetch(`http://localhost:4242/api/users/${username}`);
 			const user = await response.json();
-			console.log(user);
-			setUser(user);
+			console.log(user.data);
+			setUser(user.data);
 		} catch (error) {
 			console.log(error.message);
 		}
