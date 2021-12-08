@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
 	defaultStyle: {
 		fontStyle: "bold",
 		fontSize: 30,
-		color: "#fc9d03"
+		color: "#F92672"
 	},
 });

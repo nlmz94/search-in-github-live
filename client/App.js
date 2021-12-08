@@ -3,7 +3,6 @@ import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import background from "./assets/bg.jpg";
 import QuestionText from "./src/QuestionText";
 import AnswerText from "./src/AnswerText";
-import ViewabilityHelper from "react-native-web/dist/vendor/react-native/ViewabilityHelper";
 
 export default function App() {
 	const [username, setUsername] = useState("Dylan");
@@ -13,7 +12,6 @@ export default function App() {
 		try {
 			const response = await fetch(`http://localhost:4242/api/users/${username}`);
 			const user = await response.json();
-			console.log(user.data.user);
 			setUser(user.data.user);
 		} catch (error) {
 			console.log(error.message);
@@ -23,8 +21,8 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<div style={{ flexDirection:'row' }}>
-				<TextInput style={styles.input} onChangeText={setUsername} value={username} color="#00ff00"/>
-				<Button onPress={search} title="Search" color="#000000"/>
+				<TextInput style={styles.input} onChangeText={setUsername} value={username}/>
+				<Button style={styles.button} onPress={search} title="Search" color={"#66D9EF"}/>
 			</div>
 			<Text>
 				<QuestionText>ID ==></QuestionText><AnswerText>{user.id}</AnswerText>{"\n"}
@@ -59,7 +57,7 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		backgroundColor: '#000000',
-		color: '#00ff00',
+		color: '#66D9EF',
 		fontSize: 28
 	}
 });
