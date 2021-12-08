@@ -1,13 +1,29 @@
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "mysql"
-    url      = env("DATABASE_URL")
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-    id          String @id @default(uuid())
-    login       String @unique
+  id               String    @id @default(uuid())
+  login            String    @unique
+  node_id          String?
+  html_url         String?
+  name             String?
+  company          String?
+  blog             String?
+  location         String?
+  email            String?
+  hireable         Boolean   @default(false)
+  bio              String?
+  twitter_username String?
+  public_repos     Int       @default(0)
+  public_gists     Int       @default(0)
+  followers        Int       @default(0)
+  following        Int       @default(0)
+  created_at       DateTime  @default(now())
+  updated_at       DateTime? @updatedAt
 }
