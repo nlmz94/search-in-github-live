@@ -12,6 +12,7 @@ model User {
   login            String    @unique
   node_id          String?
   html_url         String?
+  avatar_url       String?
   name             String?
   company          String?
   blog             String?

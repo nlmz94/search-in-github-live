@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Button, StyleSheet, Text, TextInput, View, Image} from 'react-native';
 import background from "./assets/bg.jpg";
 import QuestionText from "./src/QuestionText";
 import AnswerText from "./src/AnswerText";
@@ -7,6 +7,8 @@ import AnswerText from "./src/AnswerText";
 export default function App() {
 	const [username, setUsername] = useState("Dylan");
 	const [user, setUser] = useState({});
+	let imageDeProfile = '';
+	imageDeProfile = user.avatar_url ? {uri: user.avatar_url} : require('./assets/avatar_placeholder.png');
 
 	async function search() {
 		try {
@@ -20,6 +22,7 @@ export default function App() {
 
 	return (
 		<View style={styles.container}>
+			<Image source={imageDeProfile} style={{width: 250, height: 250}} />
 			<div style={{ flexDirection:'row' }}>
 				<TextInput style={styles.input} onChangeText={setUsername} value={username}/>
 				<Button style={styles.button} onPress={search} title="Search" color={"#66D9EF"}/>
@@ -29,6 +32,7 @@ export default function App() {
 				<QuestionText>Login ==></QuestionText><AnswerText>{user.login}</AnswerText>{"\n"}
 				<QuestionText>Node ID ==></QuestionText><AnswerText>{user.node_id}</AnswerText>{"\n"}
 				<QuestionText>URL ==></QuestionText><AnswerText>{user.html_url}</AnswerText>{"\n"}
+				<QuestionText>Lien d'image de profile ==></QuestionText><AnswerText>{user.avatar_url}</AnswerText>{"\n"}
 				<QuestionText>Nom ==></QuestionText><AnswerText>{user.name}</AnswerText>{"\n"}
 				<QuestionText>Entreprise ==></QuestionText><AnswerText>{user.company}</AnswerText>{"\n"}
 				<QuestionText>Blog ==></QuestionText><AnswerText>{user.blog}</AnswerText>{"\n"}

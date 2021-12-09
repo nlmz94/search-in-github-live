@@ -19,6 +19,7 @@ api.get("/:username", async (req, response) => {
 					login: res.data.login,
 					node_id: res.data.node_id,
 					html_url: res.data.html_url,
+					avatar_url: res.data.avatar_url,
 					name: res.data.name,
 					company: res.data.company,
 					blog: res.data.blog,
