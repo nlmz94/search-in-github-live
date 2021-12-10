@@ -3,8 +3,10 @@ import {Button, StyleSheet, Text, TextInput, View, Image} from 'react-native';
 import background from "./assets/bg.jpg";
 import QuestionText from "./src/QuestionText";
 import AnswerText from "./src/AnswerText";
+import Constants from 'expo-constants';
 
 export default function App() {
+	const { extra: { API_URL } } = Constants.manifest
 	const [username, setUsername] = useState("Dylan");
 	const [user, setUser] = useState({});
 	let imageDeProfile = '';
@@ -12,7 +14,7 @@ export default function App() {
 
 	async function search() {
 		try {
-			const response = await fetch(`http://localhost:4242/api/users/${username}`);
+			const response = await fetch(`${API_URL}${username}`);
 			const user = await response.json();
 			setUser(user.data.user);
 		} catch (error) {
