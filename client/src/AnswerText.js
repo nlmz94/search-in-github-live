@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
 	defaultStyle: {
 		fontStyle: "italic",
 		fontSize: 18,
-		color: "#00ff00"
+		color: "#00ff00",
+		marginLeft: 50
 	},
 });

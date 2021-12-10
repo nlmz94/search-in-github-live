@@ -28,25 +28,24 @@ export default function App() {
 				<Button style={styles.button} onPress={search} title="Search" color={"#66D9EF"}/>
 			</div>
 			<Text>
-				<QuestionText>ID ==></QuestionText><AnswerText>{user.id}</AnswerText>{"\n"}
-				<QuestionText>Login ==></QuestionText><AnswerText>{user.login}</AnswerText>{"\n"}
-				<QuestionText>Node ID ==></QuestionText><AnswerText>{user.node_id}</AnswerText>{"\n"}
-				<QuestionText>URL ==></QuestionText><AnswerText>{user.html_url}</AnswerText>{"\n"}
-				<QuestionText>Lien d'image de profile ==></QuestionText><AnswerText>{user.avatar_url}</AnswerText>{"\n"}
-				<QuestionText>Nom ==></QuestionText><AnswerText>{user.name ?? 'n/a'}</AnswerText>{"\n"}
-				<QuestionText>Entreprise ==></QuestionText><AnswerText>{user.company}</AnswerText>{"\n"}
-				<QuestionText>Blog ==></QuestionText><AnswerText>{user.blog}</AnswerText>{"\n"}
-				<QuestionText>Adresse ==></QuestionText><AnswerText>{user.location}</AnswerText>{"\n"}
-				<QuestionText>Email ==></QuestionText><AnswerText>{user.email}</AnswerText>{"\n"}
-				<QuestionText>Embauchage ==></QuestionText><AnswerText>{user.hireable}</AnswerText>{"\n"}
-				<QuestionText>Bio ==></QuestionText><AnswerText>{user.bio}</AnswerText>{"\n"}
-				<QuestionText>Login Twitter ==></QuestionText><AnswerText>{user.twitter_username}</AnswerText>{"\n"}
-				<QuestionText>Repos Publiques ==></QuestionText><AnswerText>{user.public_repos}</AnswerText>{"\n"}
-				<QuestionText>Gists Publiques ==></QuestionText><AnswerText>{user.public_gists}</AnswerText>{"\n"}
-				<QuestionText>Followers ==></QuestionText><AnswerText>{user.followers}</AnswerText>{"\n"}
-				<QuestionText>Followings ==></QuestionText><AnswerText>{user.following}</AnswerText>{"\n"}
-				<QuestionText>Date de création ==></QuestionText><AnswerText>{user.created_at}</AnswerText>{"\n"}
-				<QuestionText>Date de màj ==></QuestionText><AnswerText>{user.updated_at}</AnswerText>{"\n"}
+				<QuestionText>ID: {"\n"}</QuestionText><AnswerText>{user.id}</AnswerText>{"\n"}
+				<QuestionText>Login: {"\n"}</QuestionText><AnswerText>{user.login}</AnswerText>{"\n"}
+				<QuestionText>Node ID: {"\n"}</QuestionText><AnswerText>{user.node_id}</AnswerText>{"\n"}
+				<QuestionText>URL: {"\n"}</QuestionText><AnswerText>{user.html_url}</AnswerText>{"\n"}
+				<QuestionText>Nom: {"\n"}</QuestionText><AnswerText>{user.name}</AnswerText>{"\n"}
+				<QuestionText>Entreprise: {"\n"}</QuestionText><AnswerText>{user.company}</AnswerText>{"\n"}
+				<QuestionText>Blog: {"\n"}</QuestionText><AnswerText>{user.blog}</AnswerText>{"\n"}
+				<QuestionText>Adresse: {"\n"}</QuestionText><AnswerText>{user.location}</AnswerText>{"\n"}
+				<QuestionText>Email: {"\n"}</QuestionText><AnswerText>{user.email}</AnswerText>{"\n"}
+				<QuestionText>Embauchage: {"\n"}</QuestionText><AnswerText>{user.hireable}</AnswerText>{"\n"}
+				<QuestionText>Bio: {"\n"}</QuestionText><AnswerText>{user.bio}</AnswerText>{"\n"}
+				<QuestionText>Login Twitter: {"\n"}</QuestionText><AnswerText>{user.twitter_username}</AnswerText>{"\n"}
+				<QuestionText>Repos Publiques: {"\n"}</QuestionText><AnswerText>{user.public_repos}</AnswerText>{"\n"}
+				<QuestionText>Gists Publiques: {"\n"}</QuestionText><AnswerText>{user.public_gists}</AnswerText>{"\n"}
+				<QuestionText>Followers: {"\n"}</QuestionText><AnswerText>{user.followers}</AnswerText>{"\n"}
+				<QuestionText>Followings: {"\n"}</QuestionText><AnswerText>{user.following}</AnswerText>{"\n"}
+				<QuestionText>Date de création: {"\n"}</QuestionText><AnswerText>{user.created_at}</AnswerText>{"\n"}
+				<QuestionText>Date de màj: {"\n"}</QuestionText><AnswerText>{user.updated_at}</AnswerText>{"\n"}
 			</Text>
 		</View>
 	);
