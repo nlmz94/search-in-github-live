@@ -14,6 +14,7 @@ api.get("/:username", async (req, response) => {
 		const res = await axios.get(`https://api.github.com/users/${username}`, {
 			headers: {Authorization:`token ${process.env.GITHUB_TOKEN}`}
 		});
+		console.log('bruh');
 		user = res.data;
 		await prisma.user.create({data: {...res.data, hireable: res.data.hireable ?? undefined}});
 	}

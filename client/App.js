@@ -4,9 +4,10 @@ import background from "./assets/bg.jpg";
 import QuestionText from "./src/QuestionText";
 import AnswerText from "./src/AnswerText";
 import Constants from 'expo-constants';
+import { API_URL } from '@env';
 
 export default function App() {
-	const { extra: { API_URL } } = Constants.manifest
+	//const { extra: { API_URL } } = Constants.manifest
 	const [username, setUsername] = useState("Dylan");
 	const [user, setUser] = useState({});
 	let imageDeProfile = '';
@@ -14,6 +15,7 @@ export default function App() {
 
 	async function search() {
 		try {
+			console.log(API_URL);
 			const response = await fetch(`${API_URL}${username}`);
 			const user = await response.json();
 			setUser(user.data.user);
