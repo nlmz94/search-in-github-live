@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, TextInput, View, Image} from 'react-native';
+import {Button, StyleSheet, Text, TextInput, View, Image, Linking} from 'react-native';
 import background from "./assets/bg.jpg";
 import QuestionText from "./src/QuestionText";
 import AnswerText from "./src/AnswerText";
-import Constants from 'expo-constants';
 import { API_URL } from '@env';
 
 export default function App() {
-	//const { extra: { API_URL } } = Constants.manifest
 	const [username, setUsername] = useState("Dylan");
 	const [user, setUser] = useState({});
 	let imageDeProfile = '';
@@ -15,7 +13,6 @@ export default function App() {
 
 	async function search() {
 		try {
-			console.log(API_URL);
 			const response = await fetch(`${API_URL}${username}`);
 			const user = await response.json();
 			setUser(user.data.user);
@@ -29,8 +26,9 @@ export default function App() {
 			<Image source={imageDeProfile} style={{width: 250, height: 250}} />
 			<div style={{ flexDirection:'row' }}>
 				<TextInput style={styles.input} onChangeText={setUsername} value={username}/>
-				<Button style={styles.button} onPress={search} title="Search" color={"#66D9EF"}/>
+				<Button onPress={search} title="Search" color={"#66D9EF"}></Button>
 			</div>
+			<Button disabled={!user.html_url} onPress={() => Linking.openURL(user.html_url)} title='Go github'></Button>
 			<Text>
 				<QuestionText>ID {"\n"}</QuestionText><AnswerText>{user.id}</AnswerText>{"\n"}
 				<QuestionText>Login {"\n"}</QuestionText><AnswerText>{user.login}</AnswerText>{"\n"}
