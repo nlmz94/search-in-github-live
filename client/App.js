@@ -33,7 +33,7 @@ export default function App() {
 				<QuestionText>Node ID ==></QuestionText><AnswerText>{user.node_id}</AnswerText>{"\n"}
 				<QuestionText>URL ==></QuestionText><AnswerText>{user.html_url}</AnswerText>{"\n"}
 				<QuestionText>Lien d'image de profile ==></QuestionText><AnswerText>{user.avatar_url}</AnswerText>{"\n"}
-				<QuestionText>Nom ==></QuestionText><AnswerText>{user.name}</AnswerText>{"\n"}
+				<QuestionText>Nom ==></QuestionText><AnswerText>{user.name ?? 'n/a'}</AnswerText>{"\n"}
 				<QuestionText>Entreprise ==></QuestionText><AnswerText>{user.company}</AnswerText>{"\n"}
 				<QuestionText>Blog ==></QuestionText><AnswerText>{user.blog}</AnswerText>{"\n"}
 				<QuestionText>Adresse ==></QuestionText><AnswerText>{user.location}</AnswerText>{"\n"}
