@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `site_admin` BOOLEAN NOT NULL DEFAULT false,
+    ADD COLUMN `type` VARCHAR(191) NULL;
